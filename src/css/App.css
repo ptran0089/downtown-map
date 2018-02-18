@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.container {
+  height: 100%;
+}
+
+.container .map {
+  width: 100%;
+}
+
+.container .map .map-holder {
+  height: 100%;
+}
+
+.container .map .map-holder .card-block {
+  height: 100vh;
+  width: 100%;
+}
+
+.container .sidebar {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 240px;
+}
+
+.container .sidebar .filters {
+	width: 100%;
+}
+
+.container .sidebar .filters button {
+	width: 100%;
+	height: 40px;
+	background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	outline: none;
+	border: 1px solid #3b6e22;
+	font-size: .9rem;
+	color: white;
+}
+
+.container .sidebar .filters button:hover {
+	cursor: pointer;
+}
+
+.container .sidebar .filters input {
+	display: block;
+	margin: 5px 0;
+	width: 100%;
+	padding: 5px 0 5px 10px;
+}
+
+.container .sidebar .filters .filter-btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.container .sidebar .filters .filter-btns label {
+	width: 25%;
+	height: 30px;
+	padding-top: 3px;
+	margin-bottom: 5px;
+	outline: none;
+	border: 2px white solid;
+	border-radius: 100px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	background: #22ab58;
+	color: white;
+	text-align: center;
+}
+
+.container .sidebar .filters .filter-btns input[type="checkbox"] {
+	position: absolute;
+	left: -9999px;
+}
+
+.container .sidebar .filters .filter-btns label:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.container .sidebar .filters .filter-btns input[type="checkbox"]:checked + label {
+	background: #383838;
+	color: #7e7878;
+} 
+
+.container .sidebar .list h1 {
+	padding: 10px;
+	background: #547c42;
+	font-size: 1.3rem;
+	color: white;
+	text-align: center;
+	cursor: default;
+}
+
+.container .sidebar .list ul {
+	height: 500px;
+	overflow: scroll;
+	background: white;
+	border: 3px #547c42 solid;
+	font-size: 1.1rem;
+	transition : all .1s ease-in;
+}
+
+.container .sidebar .list ul.hidden {
+	height: 0;
+	opacity: 0;
+	transition : all .1s ease-out;
+}
+
+.container .sidebar .list li {
+	border: 1px #d6d6c2 solid;
+	padding: 15px;
+}
+
+.container .sidebar .list li:hover {
+	background: #123d82;
+	color: white;
+	cursor: pointer;
+}
+
+.info-window {
+	width: 300px;
+	height: 300px;
+}
+
+@media screen and (max-width: 700px) {
+	.container .sidebar {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		width: 200px;
+	}
+
+	.container .sidebar .list ul {
+		height: 200px;
+	}
+
+	.info-window {
+		width: 200px;
+		height: 200px;
+	}
+}
